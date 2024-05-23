@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}PUP ALUMNI PORTAL {% endblock %}</title>
+    
+    <link rel="stylesheet" href="{% static '/css/styles.css' %}">
+</head>
+<body>
+    <nav  class="navbar navbar-expand-lg fixed-top" >
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#home">
+                <img src="{%static '/img/pup.png' %}" alt="PUP Logo" class="brand-logo">
+                <img src="{%static '/img/arcdo.png' %}" alt="ARCDO Logo" class="brand-logo">   
+                <h5>POLYTECHNIC UNIVERSITY OF THE PHILIPPINES</h5>  
+                <h6>Alumni Relations & Career Development Office</h6>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+                <ul class="navbar-nav justify-content-end">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" href="#courses">News & Features</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#gallery">Careers</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">Events</a>
+                    </li>
+                    <li class="nav-item">
+                            <a class="nav-link" href="#contact">Online services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">About</a>
+                    </li>
+                    <li class="nav-item">
+                            <a class="nav-link" href="{% url 'login' %}" target="_blank">Search</a> 
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        {% block content %}
+        {% endblock %}
+    </div>
+
+    <footer><h1>THIS IS A FOOTER</h1></footer>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
