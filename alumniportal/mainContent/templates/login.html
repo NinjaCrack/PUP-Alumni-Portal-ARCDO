@@ -16,13 +16,15 @@
         <div class="form-container sign-up">
             <form>
                 <h1>Create Account</h1>
+                <div class="mobile-hidden">
                 <div class="login-logo">
                     <img src="{% static '/img/pup.png' %}" alt="PUP Logo">
                     <img src="{% static '/img/arcdo.png' %}" alt="ARCDO Logo">
                 </div>
-                <input type="text" placeholder="Name">
-                <input type="email" placeholder="Email">
-                <input type="password" placeholder="Password">
+                </div>
+                <input type="text" placeholder="Name" required>
+                <input type="email" placeholder="Email" required>
+                <input type="password" placeholder="Password" required>
                 <button>Sign Up</button>
             </form>
         </div>
@@ -33,8 +35,8 @@
                     <img src="{% static '/img/pup.png' %}" alt="PUP Logo">
                     <img src="{% static '/img/arcdo.png' %}" alt="ARCDO Logo">
                 </div>
-                <input type="email" placeholder="Email">
-                <input type="password" placeholder="Password">
+                <input type="email" placeholder="Email" required>
+                <input type="password" placeholder="Password" required>
                 <a href="#">Forget Your Password?</a>
                 <button>Sign In</button>
             </form>
@@ -67,6 +69,16 @@
     loginBtn.addEventListener('click', () => {
         container.classList.remove("active");
     });
+
+    //window.onload = window.onresize = function() {
+        //if (window.matchMedia('(max-width: 767px)').matches) {
+            // the viewport is less than 768 pixels wide
+            //container.classList.remove("active");
+            //container.classList.remove("form-container sign-in");
+            //container.classList.remove("form-container sign-up");
+    //    } 
+    //};
+
    </script>
    
 </body>

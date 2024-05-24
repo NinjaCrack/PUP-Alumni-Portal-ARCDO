@@ -1,6 +1,4 @@
 body{
-    /*background-color: #c9d6ff;*/
-    /*background: linear-gradient(to right, #b37d7d, #681212);*/
     display: flex;
     align-items: center;
     justify-content: center;
@@ -172,4 +170,65 @@ body{
 }
 .login-container.active .toggle-right{
     transform: translateX(200%);
+}
+@media (max-width: 768px) {
+    body{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        height: 100vh;
+    }
+    .toggle-container{
+    display: none;
+   }
+   .login-container{
+    font-size: 1.5rem;
+    height: 100vh;
+    display: flex;
+    flex-direction: column-reverse;
+    top:auto;
+   }
+   .form-container{
+    font-size: 1.5rem;
+    position: relative;
+    top:auto;
+    height: auto;
+    display: flex;
+    flex-direction: column-reverse;
+    margin-bottom: auto;
+    }
+    .form-container input{
+        font-size: 1.1rem;
+    }
+    .form-container button{
+        font-size: 1.1rem;
+    }
+    .sign-in{
+        width: 100%;
+        opacity: 1;
+        top:5%;
+    }
+    .mobile-hidden{
+        display: none;
+    }
+    .sign-up{
+        width: 100%;
+        opacity: 1;
+        top: 5%;
+        
+    }   
+    .login-container.active .sign-in {
+        transform: translateX(-100%);
+        width: 100%;
+        opacity: 1;
+        top:auto;
+    }
+    .login-container.active .sign-up {
+        transform: translateX(-100%);
+        width: 100%;
+        opacity: 1;
+        top:auto;
+    }
+    
 }
