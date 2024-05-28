@@ -8,45 +8,14 @@
     <title>{% block title %} {% endblock %}</title>
     
     <link rel="stylesheet" href="{% static '/css/styles.css' %}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
 
     <!--Font awesome-->
     <script src="https://kit.fontawesome.com/1c1a5c93e8.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <nav>
-       <!-- <div class="brand">
-             <img src="{% static '/img/pup.png' %}" alt="logo" class="PUP logo"> 
-             <img src="{% static '/img/arcdo.png' %}" alt="logo" class="ARCDO logo">            
-        </div>
-    -->
-            <ul class="sidebar" id="sidebar">
-                <li onclick=hideSidebar()><svg xmlns="http://www.w3.org/2000/svg" height="48px" viewBox="0 -960 960 960" width="48px" fill="#e8eaed"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></li>
-                <li><a href="">Home</a></li>
-                <li><a href="">News & Features</a></li>
-                <li><a href="">Careers</a></li>
-                <li><a href="">Events</a></li>
-                <li><a href="">Online Services</a></li>
-                <li><a href="">About</a></li>
-            </ul>
-            <ul>
-                <li class="brand">
-                    <img src="{% static '/img/pup.png' %}" alt="logo" class="logo"> 
-                    <img src="{% static '/img/arcdo.png' %}" alt="logo" class="logo"> 
-                </li>
-                <li>
-                    <h3 class="hideOnMobile">Polytechnic University of the Philippines</h3>
-                    <p class="hideOnMobile">Alumni Relations & Career Development Office</p>
-                </li>
-                <li class="hideOnMobile"><a href="">Home</a></li>
-                <li class="hideOnMobile"><a href="">News & Features</a></li>
-                <li class="hideOnMobile"><a href="">Careers</a></li>
-                <li class="hideOnMobile"><a href="">Events</a></li>
-                <li class="hideOnMobile"><a href="">Online Services</a></li>
-                <li class="hideOnMobile"><a href="">About</a></li>
-                <li class="menu-button" onclick=showSidebar() ><svg xmlns="http://www.w3.org/2000/svg" height="48px" viewBox="0 -960 960 960" width="48px" fill="#e8eaed"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></li>
-            </ul>
-    </nav>
-
+    {% include "components/nav.html" %}
     <div class="container">
         <main>
             {% block content %}
