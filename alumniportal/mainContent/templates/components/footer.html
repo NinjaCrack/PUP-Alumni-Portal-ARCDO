@@ -1,65 +1,101 @@
 {% load static %}
-<footer class="pt-3">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-6 ">
-                <address>
-                    <h4><i class="fa-solid fa-location-dot"></i> Address</h4>
-                    <h6>Alumni Relations & Career Development Office</h6>
-                    <p>2/F North Wing, Main Building</p>
-                    <p>pup A. Mabini Campus, Anonas St., Sta. Mesa, Manila </p>
-                    <p>Manila, Philippines 1016</p>
-                </address>
-                <h4><i class="fa-solid fa-phone"></i> Contact</h4>
-                <p> (63 2) 714-0593, (63 2) 335-1PUP (335-1787) or 335-1777 local 340<br></p>
 
-                <h4><i class="fa-solid fa-envelope"></i> Email</h4>
-                <p> career_alumni@pup.edu.ph</p>
+<footer class="container-fluid">
+    <div class="row">
+
+        <div class="col-md-6 info">
+
+            <h3>Address</h3>
+
+            <div class="row">
+
+            <img src="{% static "img/icons/map-pin.svg" %}" alt="location">
+            
+            <div class="col">
+            <p><strong>Alumni Relations and Career Development Office</strong></p>
+            <p>2/F North Wing Main Building</p>
+            <p>PUP A. Mabini Campus, Anonas St., Sta. Mesa</p>
+            <p>Manila, Philippines 1016</p>
             </div>
-            <div class="col-md-6">
-                <form>
-                        <h4>HOW CAN WE ASSIST?</h4>
-                        <p>We are here to address any questions you may have about the Alumni Relations and Career Development Office.
-                            Please contact us and we will get back to you as soon as possible</p>
-                            <div class="row">
-                                <div class="col-md-6 mb-3">
-                                  <div class="form-group">
-                                    <input type="text" class="form-control" id="name" placeholder="Name" required>
-                                  </div>
-                                </div>
-                                <div class="col-md-6 mb-3">
-                                  <div class="form-group">
-                                    <input type="email" class="form-control" id="email" placeholder="Email" required>
-                                  </div>
-                                </div>
-                              </div>
-                              <div class="row">
-                                <div class="col-md-6 mb-3">
-                                  <div class="form-group">
-                                    <input class="form-control" type="number" id="year" name="year" min="1900" max="2100" placeholder="Year of Graduation">
-                                  </div>
-                                </div>
-                                <div class="col-md-6 mb-3">
-                                  <div class="form-group">
-                                    <input type="text" class="form-control" id="course" placeholder="Course/Program">
-                                  </div>
-                                </div>
-                              </div>
-                              <div class="row">
-                                <div class="col-md-12 mb-3">
-                                  <div class="form-group">
-                                    <label for="message"></label>
-                                    <textarea class="form-control" id="message" rows="5" placeholder="Compose Message" required></textarea>
-                                  </div>
-                                </div>
-                              </div>
-                              <button type="submit" class="btn mt-3 mb-3">Send Message</button>
-                </form>
             </div>
+
+            <h3>Phone Number</h3>
+            <div class="row">
+            <img src="{% static "img/icons/phone.svg" %}" alt="phone">
+            <div class="col">
+            <p>(63 2) 714-0593, (63 2) 335-1PUP (335-1787) or 335-1777 local 340</p>
+            </div>
+            </div>
+
+            <h3>E-mail Address</h3>
+            <div class="row">
+            <img src="{% static "img/icons/envelope.svg" %}" alt="mail">
+            <div class="col">
+            <p>career_alumni@pup.edu.ph</p>
+            </div>
+            </div>
+
         </div>
+
+        <div class="col-md-6 sec-2">
+            <h3>HOW CAN WE ASSIST</h3>
+            <p>We are here to address any questions you may have about the Alumni Relations and Career Development Office.
+                Please contact us and we will get back to you as soon as possible.</p>
+
+                <form method="POST" action="">
+                {% csrf_token %}
+
+                <div class="row">
+                    
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <input id="name" name="name" type="text" class="form-control" placeholder="Name (LN, FN, MI.)">
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <input id="email" name="email" type="email" class="form-control" placeholder="E-mail Address">
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <input id="year" name="year" type="text" class="form-control" placeholder="Year of Graduation">
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <input id="program" name="program" type="text" class="form-control" placeholder="Course/Program">
+                        </div>
+                    </div>
+
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <textarea id="message" name="message" class="form-control" placeholder="Compose Message..."></textarea>
+                        </div>
+                    </div>
+
+                    <div class="col-md-12">
+                        <div class="form-group mb-3">
+                            {{ form.captcha }}
+                        </div>   
+                    </div>
+
+                    <div class="col-md-12">
+                        <button type="submit" name="submit" class="btn btn-lg">
+                            <img src="{% static "img/icons/envelope.svg" %}" alt="mail">  Send message
+                        </button>
+                    </div>
+                </div>
+                </form>
+        </div>
+
+        <div class="copyrigths">
+            <p>&copy; 2024 Polytechnic University of the Philippines</p>
+            <p>Alumni Relations and Career Development</p>
+        </div>
+
     </div>
-    <div class="col-md-12 pt-2 pb-1 copyright">
-      <p class="text-center">© 2024. Polytechnic University of the Philippines</p>
-      <p class="text-center">Alumni Relations and Career Development</p>
-  </div>
 </footer>
