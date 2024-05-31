@@ -94,7 +94,28 @@ button.navbar-toggler img {
   filter: invert(100%);
 }
 
-
+footer{
+  background-color: #555555;
+  color: #eee;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+footer h4{
+  color: #DC3545;
+}
+footer .btn{
+  background-color: #DC3545;
+  color: #CED4DA;
+  border: 1px solid #FCBF15;
+}
+.copyright{
+  background-color: #2D2926;
+  color: #fff;
+  width: 100%;
+}
 @media (max-width: 992px) {
 
   .navbar .navbar-collapse {
