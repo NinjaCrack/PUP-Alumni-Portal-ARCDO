@@ -9,3 +9,5 @@ def register(request):
 def index(request):
     context = {'form' : FormWithCaptcha()}
     return render(request, 'index.html', context)
+def career(request):
+    return render(request, 'career.html')

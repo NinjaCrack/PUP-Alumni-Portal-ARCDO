@@ -1,0 +1,67 @@
+{% extends "base.html" %} {% block title %}PUP ALUMNI PORTAL {% endblock %} 
+{% load static %}
+
+{% block content %}
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-5 career-bg">
+            <div class="career-text">
+                <h1>PUP Career</h1>
+                <hr>
+                <p>Polytechnic University of the Philippines Career Directory </p>
+                <p>Unlock Your Career Potential: Your Degree, Your Path!</p>
+                <button class="">Click here</button>
+            </div>
+        </div>
+        <div class="col-md-7 career-form">
+            <h1>JOB POSTING</h1><p>Request Form</p>
+            <form>
+                <div class="mb-3">
+                    <input class="form-control form-control-lg" type="text" placeholder="Company Name" required>
+                </div>
+                <div class="mb-3">
+                    <input class="form-control form-control-lg" type="email" placeholder="Company Email Address" required>
+                </div>
+                <div class="mb-3">
+                    <input class="form-control form-control-lg" type="text" placeholder="Company Address">
+                </div>
+                <div class="mb-3">
+                    <input class="form-control form-control-lg" type="number" placeholder="Company number" required>
+                </div>
+                <div class="mb-3">
+                    <input class="form-control form-control-lg" type="text" placeholder="Contact Person">
+                </div>
+                <div class="mb-3">
+                    <select class="form-control form-control-lg">
+                        <option>Select Company Type</option>
+                        <option>Information Technology</option>
+                        <option>Engineering</option>
+                        <option>Accounting</option>
+                        <option>Marketing</option>
+                        <option>Human Resource</option>
+                        <option>Others</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <select class="form-control form-control-lg">
+                        <option>Select Company Field Industry</option>
+                        <option>Information Technology</option>
+                        <option>Engineering</option>
+                        <option>Accounting</option>
+                        <option>Marketing</option>
+                        <option>Human Resource</option>
+                        <option>Others</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <textarea  name="message" class="form-control form-control-lg" placeholder="Message here"></textarea>
+                </div>
+                <div class="mb-3">
+                    <button type="submit" name="submit" class="form-control">  SUBMIT REQUEST
+                    </button>
+                </div>               
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}

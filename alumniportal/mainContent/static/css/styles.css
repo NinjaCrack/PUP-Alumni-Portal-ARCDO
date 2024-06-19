@@ -121,6 +121,60 @@ footer .btn{
   color: #fff;
   width: 100%;
 }
+
+/* Career Section*/
+.career-bg{
+  background: url('../img/career.png') no-repeat;
+  background-size: cover;
+  height: 90vh;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+.career-text{
+  background-color: rgba(0, 0, 0, 0.6);
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  color: #eee;
+  font-size: 1rem;
+  padding: 5px;
+}
+.career-text h1{
+  color: #DC3545;
+}
+.career-text hr{
+  background-color: #20B2F6;
+  height: 5px;
+  width: 150px;
+  margin-left: 10px;
+}
+.career-text button{
+  background-color: #DC3545;
+  color: #ffffff;
+  border:   1px solid #FCBF15;
+  width: 150px;
+  height: 48px;
+  margin-left: 10px;
+
+}
+.career-form{
+  padding: 10px;
+}
+.career-form h1{
+  font-size: 2rem;
+}
+.career-form p{
+  color:#800000;
+}
+.career-form button{
+  background-color: #800000;
+  color: #ffffff;
+  height: 48px;
+
+}
+
 @media (max-width: 992px) {
 
   .navbar .navbar-collapse {
@@ -151,6 +205,9 @@ footer .btn{
       margin-top: 1rem;
       color: #fff;
   }
+  .career-bg{
+    display: none;
+  }
 }
 
 @media (min-width: 768px) {
@@ -158,6 +215,7 @@ footer .btn{
       padding: 0.5rem 0;
       margin: 0 5rem;
   }
+  
 }
 
 /* Styles for the footer section */
