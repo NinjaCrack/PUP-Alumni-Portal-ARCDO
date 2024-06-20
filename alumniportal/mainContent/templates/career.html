@@ -2,65 +2,81 @@
 {% load static %}
 
 {% block content %}
-<div class="container mt-5">
+<div class="career-bg" >    
+</div>
+<div class="container">
     <div class="row">
-        <div class="col-md-5 career-bg">
-            <div class="career-text">
-                <h1>PUP Career</h1>
-                <hr>
-                <p>Polytechnic University of the Philippines Career Directory </p>
-                <p>Unlock Your Career Potential: Your Degree, Your Path!</p>
-                <button class="">Click here</button>
+        <div class="col-md-12">
+            <div class="career-content mt-4 text-center">
+                <h1 class="">JOB CATEGORY</h1>
+                <p>Finding Job should not be a full-time endeavor. Tell us what you're searching for, and we'll find you job.</p>
+                <div class="job-category">
+                    <div class="row mt-4">
+                        <div class="col">
+                            <div class="card" style="width: 18rem;">
+                                <img src="{% static 'img/PUPLogo.png' %}" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                  <h5 class="card-title">MECHANICAL ENGINEERING</h5>
+                                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card" style="width: 18rem;">
+                                <img src="{% static 'img/PUPLogo.png' %}" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                  <h5 class="card-title">COMPUTER ENGINEERING</h5>
+                                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card" style="width: 18rem;">
+                                <img src="{% static 'img/PUPLogo.png' %}" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                  <h5 class="card-title">ELECTRICAL ENGINEERING</h5>
+                                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mt-4 mb-4">
+                        <div class="col">
+                            <div class="card" style="width: 18rem;">
+                                <img src="{% static 'img/arcdo.png' %}" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                  <h5 class="card-title">CIVIL ENGINEERING</h5>
+                                   <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card" style="width: 18rem;">
+                                <img src="{% static 'img/arcdo.png' %}" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                  <h5 class="card-title">INDUSTRAL ENGINEERING</h5>
+                                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card" style="width: 18rem;">
+                                <img src="{% static 'img/arcdo.png' %}" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                  <h5 class="card-title">ELECTRONICS ENGINEERING</h5>
+                                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
-        <div class="col-md-7 career-form">
-            <h1>JOB POSTING</h1><p>Request Form</p>
-            <form>
-                <div class="mb-3">
-                    <input class="form-control form-control-lg" type="text" placeholder="Company Name" required>
-                </div>
-                <div class="mb-3">
-                    <input class="form-control form-control-lg" type="email" placeholder="Company Email Address" required>
-                </div>
-                <div class="mb-3">
-                    <input class="form-control form-control-lg" type="text" placeholder="Company Address">
-                </div>
-                <div class="mb-3">
-                    <input class="form-control form-control-lg" type="number" placeholder="Company number" required>
-                </div>
-                <div class="mb-3">
-                    <input class="form-control form-control-lg" type="text" placeholder="Contact Person">
-                </div>
-                <div class="mb-3">
-                    <select class="form-control form-control-lg">
-                        <option>Select Company Type</option>
-                        <option>Information Technology</option>
-                        <option>Engineering</option>
-                        <option>Accounting</option>
-                        <option>Marketing</option>
-                        <option>Human Resource</option>
-                        <option>Others</option>
-                    </select>
-                </div>
-                <div class="mb-3">
-                    <select class="form-control form-control-lg">
-                        <option>Select Company Field Industry</option>
-                        <option>Information Technology</option>
-                        <option>Engineering</option>
-                        <option>Accounting</option>
-                        <option>Marketing</option>
-                        <option>Human Resource</option>
-                        <option>Others</option>
-                    </select>
-                </div>
-                <div class="mb-3">
-                    <textarea  name="message" class="form-control form-control-lg" placeholder="Message here"></textarea>
-                </div>
-                <div class="mb-3">
-                    <button type="submit" name="submit" class="form-control">  SUBMIT REQUEST
-                    </button>
-                </div>               
-            </form>
         </div>
     </div>
 </div>

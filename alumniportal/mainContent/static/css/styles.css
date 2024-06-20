@@ -124,13 +124,41 @@ footer .btn{
 
 /* Career Section*/
 .career-bg{
-  background: url('../img/career.png') no-repeat;
+  background: url('../img/career_bg2.png') no-repeat;
   background-size: cover;
-  height: 90vh;
+  background-repeat: no-repeat ;
+  height: 400px;
+  width: 100%;
+  
+/*
   display: flex;
   justify-content: start;
   align-items: center;
+  */
 }
+.job-category img{
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+
+}
+.job-category {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 10px;
+  padding: 10px;
+  background-color: #fff;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.05), inset 0px -1px 0px rgba(0, 0, 0, 0.1);
+}
+
+.job-category .row .col {
+  display: flex;
+  justify-content: center;
+  margin: 10px 0;
+}
+
 .career-text{
   background-color: rgba(0, 0, 0, 0.6);
   height: 100%;
@@ -141,39 +169,7 @@ footer .btn{
   font-size: 1rem;
   padding: 5px;
 }
-.career-text h1{
-  color: #DC3545;
-}
-.career-text hr{
-  background-color: #20B2F6;
-  height: 5px;
-  width: 150px;
-  margin-left: 10px;
-}
-.career-text button{
-  background-color: #DC3545;
-  color: #ffffff;
-  border:   1px solid #FCBF15;
-  width: 150px;
-  height: 48px;
-  margin-left: 10px;
 
-}
-.career-form{
-  padding: 10px;
-}
-.career-form h1{
-  font-size: 2rem;
-}
-.career-form p{
-  color:#800000;
-}
-.career-form button{
-  background-color: #800000;
-  color: #ffffff;
-  height: 48px;
-
-}
 
 @media (max-width: 992px) {
 
@@ -204,9 +200,6 @@ footer .btn{
       font-family: 'Sansation';
       margin-top: 1rem;
       color: #fff;
-  }
-  .career-bg{
-    display: none;
   }
 }
 
